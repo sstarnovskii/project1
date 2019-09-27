@@ -1,4 +1,4 @@
-age = input("Ваш возраст, полных лет: ")
+age = int(input("Ваш возраст, полных лет: "))
 height = input("Ваш рост, в см: ")
 weight = input("Ваш вес, в кг: ")
 sex = input("Ваш пол (М или Ж): ")
@@ -7,10 +7,15 @@ height = float(height)/100
 imt = float(weight)/(float(height)**2)
 if lifestyle <= 4:
     addwater = 0
-elif  4 <= lifestyle <=8:
+elif 4 <= lifestyle <=8:
     addwater = 2
 else: addwater = 4
 print("Ваш индекс массы тела - ", round(imt, 2), ".", sep='')
+if 5 <= age <= 17:
+    print("Вам рекомендуется заниматься ежедневно физической активностью от умеренной до высокой интенсивности, в общей сложности, не менее 60 минут.")
+elif 18<= age <= 50:
+    print("Вам рекомендуется ")
 print("Вам рекомендуется пить не менее", int(round(float(weight)/9)*0.25) + addwater, "л чистой воды в день.")
+print("При беременности, хронических заболеваниях и для детей рекомендации могут быть неточными, в этих случаях рекомендуем обратиться к специалисту.")
 print(age, height, weight, sex, lifestyle, round(imt, 2))
 
